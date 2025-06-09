@@ -17,8 +17,13 @@ The system uses two AI agents:
 
 1. Set up environment variables:
 ```
+# OpenAI configuration
 OPENAI_API_KEY=your_api_key
-MODEL_NAME_OPENAI=o3-mini-2025-01-31
+OPENAI_MODEL_NAME=o3-mini-2025-01-31
+
+# Gemini configuration (optional)
+GEMINI_API_KEY=your_gemini_api_key
+MODEL_NAME_GEMINI=models/gemini-2.5-flash-preview-05-20
 ```
 
 2. Install dependencies:
@@ -35,15 +40,22 @@ pip install -r requirements.txt
 
 3. Run the demo:
 
-With Poetry:
-```bash
-poetry run python tech_trends_crew.py
-```
-
-Or directly:
+Original version:
 ```bash
 python tech_trends_crew.py
 ```
+
+Modularized version:
+```bash
+python crew.py
+```
+
+### Note on Multi-Model Setup
+The modularized version supports using different models for each agent:
+- The Research Agent uses OpenAI's model
+- The Communication Agent uses Google's Gemini model
+
+To modify which models are used, edit the `agents.py` file.
 
 ## Output
 
