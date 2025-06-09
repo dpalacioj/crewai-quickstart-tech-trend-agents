@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "crewai-orchestration-demo"
+version = "0.1.0"
+description = "A simple demonstration of AI agent orchestration using CrewAI framework"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+crewai = "^0.28.0"
+python-dotenv = "^1.0.0"
+langchain-openai = "^0.0.6"
+langchain-ollama = "^0.1.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
